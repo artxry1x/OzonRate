@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "OzonRate",
+  "version": "1.0",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://*.ozon.ru/*", "https://*.ozon.com/*"],
+  "action": { "default_popup": "popup.html" },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["https://*.ozon.ru/*", "https://*.ozon.com/*"],
+    "js": ["content.js"]
+  }]
+}
